@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+. "$(dirname -- "$0")/_/husky.sh"
+
+branch="$(git rev-parse --abbrev-ref HEAD)"
+
+if [[ "$branch" = "main" ]]; then
+  echo "You can't commit directly to main branch"
+  exit 1
+fi
+valid_branch_regex="^sc-[0-9]{4,6}.*$"
+
+message="There is something wrong with your branch name. Branch names in this project must adhere to this contract: $valid_branch_regex. Your commit will be rejected. You should rename your branch to a valid name and try again."
+
+if ! [[ $branch =~ $valid_branch_regex ]]; then
+    echo "$message"
+    exit 1
+fi
+
+separator=$'\n---\n'
+echo "$separator"
+yarn run lint
+echo "$separator"
+yarn run format:fix
+echo "$separator"

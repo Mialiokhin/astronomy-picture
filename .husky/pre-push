@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+. "$(dirname -- "$0")/_/husky.sh"
+
+separator=$'\n---\n'
+
+echo "$separator"
+echo "$separator"

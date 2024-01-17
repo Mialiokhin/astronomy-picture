@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+. "$(dirname -- "$0")/_/husky.sh"
+
+message="$(cat $1)"
+branch="$(git rev-parse --abbrev-ref HEAD)"
+
+storyNamePattern="sc-[0-9]{4,6}"
+storyNameInBranchPattern="^$storyNamePattern"
+if ! [[ $branch =~ $storyNameInBranchPattern.* ]]; then
+  echo "-"
+  echo "-"
+  echo "-"
+  echo "Can't extract story name from branch name using this pattern: $storyNameInBranchPattern"
+  echo "-"
+  echo "For more information, check script in .husky/commit-msg"
+  echo "-"
+  exit 1
+else
+  messagePattern="^(fix|refactor|feat)\[${storyNamePattern}\]: (.*)$"
+  if ! [[ $message =~ $messagePattern ]]; then
+    echo "-"
+    echo "-"
+    echo "-"
+    echo "🚨 Wrong commit message! 😕"
+    echo "The commit message must match this format:"
+    echo "<fix|refactor|feat>[<shortcut story number>]: <goal of the changes in commit>"
+    echo "Example:"
+    echo "feat[sc-1234]: add login button"
+    echo "-"
+    echo "Your commit message was:"
+    echo "$message"
+    echo "-"
+    echo "The pattern used was:"
+    echo "$messagePattern"
+    echo "-"
+    echo "For more information, check script in .husky/commit-msg"
+    echo "-"
+    exit 1
+  fi
+fi
