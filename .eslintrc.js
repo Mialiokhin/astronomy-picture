@@ -41,21 +41,6 @@ module.exports = {
     "max-len": ["off", { code: 150 }],
     "prefer-destructuring": ["error", { object: true, array: false }],
     "unused-imports/no-unused-imports": "error",
-    "no-restricted-imports": [
-      "error",
-      {
-        patterns: [
-          {
-            group: [".*"],
-            message: "Use absolute paths for imports",
-          },
-          {
-            group: ["react-i18next"],
-            message: "Use next-i18next",
-          },
-        ],
-      },
-    ],
     "react/prop-types": "off",
     "react/display-name": "off",
     "react/self-closing-comp": "warn",
