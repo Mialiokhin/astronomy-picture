@@ -20,7 +20,7 @@ const MenuDraver = () => {
 
   return (
     <>
-      <Drawer open={isOpenMenu} onClose={toggleDrawer} direction="top" className="draver" customIdSuffix>
+      <Drawer open={isOpenMenu} onClose={toggleDrawer} direction="top" className="draver" customIdSuffix="menuDrawer">
         <Container>
           <FiltersBar loading={isLoading || false} />
         </Container>
