@@ -2,19 +2,20 @@ import React, { useState } from "react"
 
 import SendIcon from "@mui/icons-material/Send"
 import LoadingButton from "@mui/lab/LoadingButton"
-import { Typography } from "@mui/material"
+import { Button, Typography } from "@mui/material"
 import { Box } from "@mui/system"
 import { LocalizationProvider } from "@mui/x-date-pickers"
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs"
 import { DatePicker } from "@mui/x-date-pickers/DatePicker"
 import { useAtom } from "jotai"
 
-import { endDateAtom, startDateAtom, today } from "@/app/_atoms/atoms"
-import { DatePickerBox, RangeContainer } from "@/app/_components/FiltersBar/FiltersBar.styles"
+import { endDateAtom, menuAtom, startDateAtom, today } from "@/app/_atoms/atoms"
+import { BtnCloseContainer, DatePickerBox, RangeContainer } from "@/app/_components/FiltersBar/FiltersBar.styles"
 import useDeviceDetect from "@/app/_hooks/useDeviceDetect"
 
 const FiltersBar = ({ loading }: { loading: boolean }) => {
   const { isMobile } = useDeviceDetect()
+  const [isOpenMenu, setIsOpenMenu] = useAtom(menuAtom)
   const [startDate, setStartDate] = useAtom(startDateAtom)
   const [endDate, setEndDate] = useAtom(endDateAtom)
   const [startDateValue, setStartDateValue] = useState(startDate)
@@ -24,10 +25,16 @@ const FiltersBar = ({ loading }: { loading: boolean }) => {
   const handleSearchRange = () => {
     setStartDate(startDateValue)
     setEndDate(endDateValue)
+    setIsOpenMenu(!isOpenMenu)
   }
   const handleSearchDay = () => {
     setStartDate(searchDate)
     setEndDate(searchDate)
+    setIsOpenMenu(!isOpenMenu)
+  }
+
+  const toggleDrawer = () => {
+    setIsOpenMenu(!isOpenMenu)
   }
 
   return (
@@ -84,6 +91,11 @@ const FiltersBar = ({ loading }: { loading: boolean }) => {
           </LoadingButton>
         </DatePickerBox>
       </RangeContainer>
+      <BtnCloseContainer>
+        <Button variant="contained" size="large" onClick={toggleDrawer} sx={{ width: "100%", height: "50px" }}>
+          CLOSE
+        </Button>
+      </BtnCloseContainer>
     </Box>
   )
 }
