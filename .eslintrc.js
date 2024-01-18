@@ -50,7 +50,7 @@ module.exports = {
     "react/jsx-boolean-value": ["error"],
     "react/jsx-curly-brace-presence": ["error", "never"],
     "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn",
+    "react-hooks/exhaustive-deps": "off",
     "@next/next/no-img-element": "off",
     "@typescript-eslint/ban-ts-comment": "off",
     "@typescript-eslint/interface-name-prefix": "off",
