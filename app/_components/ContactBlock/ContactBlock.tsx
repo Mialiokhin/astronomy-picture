@@ -47,9 +47,9 @@ const getContactIcon = (type: string) => {
 
 const ContactBlock: React.FC<FooterContactBlockProps> = ({ contacts }) => {
   return (
-    <Grid container spacing={2} justifyContent="left" alignItems="center" margin="10px">
+    <Grid container spacing={2} justifyContent="left" alignItems="center">
       {contacts.map((contact, index) => (
-        <Grid item key={index}>
+        <Grid item key={index} sx={{ margin: "10px" }}>
           <Link href={getContactLink(contact.type, contact.value)} color="inherit" underline="none">
             {getContactIcon(contact.type)}
           </Link>
