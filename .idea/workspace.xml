@@ -1,19 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c34d04a4-c9d4-483a-b452-9b3f88335b5c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.github/workflows/CI.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.husky/commit-msg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.husky/pre-commit" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.husky/pre-push" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jest.config.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+    <list default="true" id="c34d04a4-c9d4-483a-b452-9b3f88335b5c" name="Changes" comment="fix[sc-0001]: format, lint, check actions">
+      <change afterPath="$PROJECT_DIR$/app/_atoms/atoms.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/_components/AstronomyPictureCard.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/_components/ErrorComponent.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/_components/FiltersBar/FiltersBar.styles.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/_components/FiltersBar/FiltersBar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/_components/Header.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/_components/theme.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/_hooks/useDeviceDetect.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/_hooks/useGetNasaApod.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/_types/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/template.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +27,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -38,21 +49,37 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/GIT/astronomy-picture",
+    "last_opened_file_path": "D:/GIT/astronomy-picture/app/_hooks",
     "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "prettierjs.PrettierConfiguration.Package": "D:\\GIT\\astronomy-picture\\node_modules\\prettier",
     "ts.external.directory.path": "D:\\GIT\\astronomy-picture\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="ReactDesignerToolWindowState">
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.rcb.reactComponents" value="false" />
+        <entry key="com.haulmont.rcb.reactInspector" value="false" />
+      </map>
+    </option>
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\GIT\astronomy-picture\app\_hooks" />
       <recent name="D:\GIT\astronomy-picture" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\GIT\astronomy-picture\app\_components\FiltersBar" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.lint">
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -63,9 +90,31 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="format:fix" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="format:fix" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="lint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="lint" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.lint" />
+        <item itemvalue="npm.format:fix" />
       </list>
     </recent_temporary>
   </component>
@@ -78,8 +127,24 @@
       <option name="presentableId" value="Default" />
       <updated>1705521051210</updated>
       <workItem from="1705521055513" duration="1133000" />
-      <workItem from="1705522271868" duration="334000" />
+      <workItem from="1705522271868" duration="4500000" />
+      <workItem from="1705559410649" duration="27228000" />
     </task>
+    <task id="LOCAL-00001" summary="feat: setup project">
+      <created>1705522729048</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1705522729048</updated>
+    </task>
+    <task id="LOCAL-00002" summary="fix[sc-0001]: format, lint, check actions">
+      <created>1705523384020</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1705523384020</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -95,5 +160,12 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="feat: setup project" />
+    <MESSAGE value="fix[sc-0001]: format, lint, check actions" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix[sc-0001]: format, lint, check actions" />
   </component>
 </project>

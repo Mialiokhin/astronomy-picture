@@ -29,7 +29,7 @@ module.exports = {
       version: "detect",
     },
   },
-  ignorePatterns: ["src/typings/types/generated.ts", "*.test.js", ".eslintrc.js", "next.config.js", "jest.config.js"],
+  ignorePatterns: ["*.test.js", ".eslintrc.js", "next.config.js", "jest.config.js", "inlineStyles.ts"],
   rules: {
     curly: ["error", "all"],
     "prettier/prettier": "error",
