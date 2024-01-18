@@ -45,7 +45,12 @@ const FiltersBar = ({ loading }: { loading: boolean }) => {
         </Typography>
         <DatePickerBox>
           <LocalizationProvider dateAdapter={AdapterDayjs}>
-            <DatePicker value={searchDate} onChange={(newValue) => newValue && setSearchDate(newValue)} label="Date" />
+            <DatePicker
+              value={searchDate}
+              maxDate={today}
+              onChange={(newValue) => newValue && setSearchDate(newValue)}
+              label="Date"
+            />
           </LocalizationProvider>
           <LoadingButton
             variant="contained"
