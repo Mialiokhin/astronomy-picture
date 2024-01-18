@@ -24,7 +24,8 @@ const useGetNasaApod = (): UseGetNasaApodResult => {
       )
 
       if (!response.ok) {
-        throw new Error(`Error: ${response.status}`)
+        const res = await response.json()
+        throw new Error(`${res?.msg}`)
       }
 
       const apodData: AstronomyPicture[] = await response.json()
