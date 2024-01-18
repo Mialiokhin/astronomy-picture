@@ -1,25 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c34d04a4-c9d4-483a-b452-9b3f88335b5c" name="Changes" comment="fix[sc-0001]: format, lint, check actions">
-      <change afterPath="$PROJECT_DIR$/app/_atoms/atoms.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/_components/AstronomyPictureCard.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/_components/ErrorComponent.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/_components/FiltersBar/FiltersBar.styles.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/_components/FiltersBar/FiltersBar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/_components/Header.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/_components/theme.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/_hooks/useDeviceDetect.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/_hooks/useGetNasaApod.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/_types/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/template.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
+    <list default="true" id="c34d04a4-c9d4-483a-b452-9b3f88335b5c" name="Changes" comment="feat[sc-0003]: add infinity scroll">
+      <change afterPath="$PROJECT_DIR$/app/_components/ButtonAppBar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/_components/MenuDraver.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/_components/MenuDraver.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/_atoms/atoms.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/_atoms/atoms.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/_components/FiltersBar/FiltersBar.styles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_components/FiltersBar/FiltersBar.styles.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/_components/FiltersBar/FiltersBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_components/FiltersBar/FiltersBar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/template.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/template.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,24 +37,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/GIT/astronomy-picture/app/_hooks",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "D:\\GIT\\astronomy-picture\\node_modules\\prettier",
-    "ts.external.directory.path": "D:\\GIT\\astronomy-picture\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/GIT/astronomy-picture/app/_hooks&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;D:\\GIT\\astronomy-picture\\node_modules\\prettier&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\GIT\\astronomy-picture\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -112,6 +105,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.lint" />
+        <item itemvalue="npm.format:fix" />
         <item itemvalue="npm.dev" />
         <item itemvalue="npm.lint" />
         <item itemvalue="npm.format:fix" />
@@ -144,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1705523384020</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat[sc-0003]: add infinity scroll">
+      <created>1705605168773</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1705605168773</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,6 +168,7 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="feat: setup project" />
     <MESSAGE value="fix[sc-0001]: format, lint, check actions" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix[sc-0001]: format, lint, check actions" />
+    <MESSAGE value="feat[sc-0003]: add infinity scroll" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat[sc-0003]: add infinity scroll" />
   </component>
 </project>

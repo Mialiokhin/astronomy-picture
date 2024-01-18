@@ -20,3 +20,9 @@ export const DatePickerBox = styled("div")`
     flex-flow: column;
   }
 `
+
+export const BtnCloseContainer = styled("div")`
+  display: flex;
+  justify-content: right;
+  margin: 10px;
+`

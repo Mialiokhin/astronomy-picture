@@ -2,11 +2,12 @@
 
 import React, { useEffect, useState } from "react"
 
-import { Box, Container } from "@mui/material"
+import { Box, Button, Container } from "@mui/material"
 import Skeleton from "@mui/material/Skeleton"
 
 import AstronomyPictureCard from "@/app/_components/AstronomyPictureCard"
 import ErrorComponent from "@/app/_components/ErrorComponent"
+import { BtnCloseContainer } from "@/app/_components/FiltersBar/FiltersBar.styles"
 import useGetNasaApod from "@/app/_hooks/useGetNasaApod"
 import { AstronomyPicture } from "@/app/_types"
 
@@ -37,6 +38,17 @@ export default function Home() {
     }
   }
 
+  const handleScrollToTop = () => {
+    if ("scrollBehavior" in document.documentElement.style) {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      })
+    } else {
+      window.scrollTo(0, 0)
+    }
+  }
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll)
 
@@ -59,6 +71,13 @@ export default function Home() {
             <AstronomyPictureCard data={item} key={item.title} />
           ))}
         </Box>
+      )}
+      {visibleItems.length > 2 && (
+        <BtnCloseContainer>
+          <Button variant="contained" size="large" onClick={handleScrollToTop} sx={{ width: "100%", height: "50px" }}>
+            SCROLL TO TOP
+          </Button>
+        </BtnCloseContainer>
       )}
     </Container>
   )
